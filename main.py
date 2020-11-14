@@ -7,7 +7,7 @@ import random
 
 pin = 17
 sensor = adafruit_dht.DHT11(pin)
-TOKEN = "BBFF-MwQ4pYB0m7dCfn8WB6QCf22X8j0QIl"  # Put your TOKEN here
+TOKEN = ""  # Put your TOKEN here
 DEVICE_LABEL = "sensor-temp-humidity"  # Put your device label here 
 VARIABLE_LABEL_1 = "temperature"  # Put your first variable label here
 VARIABLE_LABEL_2 = "humidity"  # Put your second variable label here
