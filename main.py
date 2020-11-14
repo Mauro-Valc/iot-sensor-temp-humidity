@@ -1,25 +1,20 @@
 import sys
 import time
 import adafruit_dht
-import time
 import requests
 import math
 import random
+
 pin = 17
 sensor = adafruit_dht.DHT11(pin)
 TOKEN = "BBFF-MwQ4pYB0m7dCfn8WB6QCf22X8j0QIl"  # Put your TOKEN here
 DEVICE_LABEL = "sensor-temp-humidity"  # Put your device label here 
-VARIABLE_LABEL_1 = "temperature1"  # Put your first variable label here
-VARIABLE_LABEL_2 = "humidity1"  # Put your second variable label here
-VARIABLE_LABEL_3 = "temperature2"  # Put your first variable label here
-VARIABLE_LABEL_4 = "humidity2"  # Put your second variable label here
+VARIABLE_LABEL_1 = "temperature"  # Put your first variable label here
+VARIABLE_LABEL_2 = "humidity"  # Put your second variable label here
 
 def build_payload(variable_1, variable_2):
     payload = {VARIABLE_LABEL_1: variable_1,
-               VARIABLE_LABEL_2: variable_2,
-               VARIABLE_LABEL_3: variable_1,
-               VARIABLE_LABEL_4: variable_2}
-
+               VARIABLE_LABEL_2: variable_2}
     return payload
 
 def post_request(payload):
